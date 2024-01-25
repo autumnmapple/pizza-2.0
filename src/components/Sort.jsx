@@ -2,12 +2,12 @@ import { useState } from "react";
 function Sort({ value, onChangeSort }) {
   const [open, setOpen] = useState(false);
   const list = [
-    { name: "популярность по убыванию", sortProperty: "rating" }, 
-    {name: "популярность по возрастанию", sortProperty: "-rating" }, 
-    { name: "цена по убыванию", sortProperty: "price" },
-    { name: "цена по возрастанию", sortProperty: "-price" },
-    { name: "алфавит по убыванию", sortProperty: "title" },
-    { name: "алфавит по возрастанию", sortProperty: "-title" },
+    { name: "популярность ↓", sortProperty: "rating" }, 
+    {name: "популярность ↑", sortProperty: "-rating" }, 
+    { name: "цена ↓", sortProperty: "price" },
+    { name: "цена ↑", sortProperty: "-price" },
+    { name: "алфавит ↓", sortProperty: "title" },
+    { name: "алфавит ↑", sortProperty: "-title" },
   ];
 
   const onClickListItem = (index) => {
