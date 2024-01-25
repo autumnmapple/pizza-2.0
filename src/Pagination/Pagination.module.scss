@@ -1,29 +1,29 @@
-.root{
-    li{
-        display: inline-block; 
-        a{
-            display: flex;
-            color: #fe5f1e;   
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #fe5f1e;
-            border-radius: 30px;
-            width: 40px;
-            height: 40px;
-            margin-right: 5px;  
-            cursor: pointer; 
-            &:hover{
-                background-color: #fe5f1e;
-                color: #fff;
-            }
-        }     
+.root {
+  li {
+    display: inline-block;
+    a {
+      display: flex;
+      color: #fe5f1e;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fe5f1e;
+      border-radius: 30px;
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #fe5f1e;
+        color: #fff;
+      }
     }
-    :global{ /*потому что информация лежит не в scss модуле*/
-        .selected{ 
-            a{
-                background-color: #fe5f1e;
-                color: #fff;   
-            }             
-        }
-    } 
-}                                                                                                 
+  }
+  :global {
+    .selected {
+      a {
+        background-color: #fe5f1e;
+        color: #fff;
+      }
+    }
+  }
+}

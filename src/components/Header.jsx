@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
-import img from '../assets/img/pizza-logo.svg'
-import Search from './Search';
+import { Link } from "react-router-dom";
+import img from "../assets/img/pizza-logo.svg";
+import Search from "./Search";
 function Header() {
   return (
     <div className="header">
       <div className="container">
-        <Link to="/"> {/*передаем главную страницу принажатии на лого*/}
+        <Link to="/">
           <div className="header__logo">
             <img width="38" src={img} alt="Pizza logo" />
             <div>
@@ -16,7 +16,7 @@ function Header() {
         </Link>
         <Search />
         <div className="header__cart">
-          <Link to="/cart" className="button button--cart"> {/* переход на страницу корзины при нажатии на корзину */}
+          <Link to="/cart" className="button button--cart">
             <span>520 ₽</span>
             <div className="button__delimiter"></div>
             <svg

@@ -1,19 +1,18 @@
 import { useState } from "react";
 function Sort({ value, onChangeSort }) {
   const [open, setOpen] = useState(false);
-  /* const [selected, setSelected] = useState(0); */
   const list = [
-    { name: "популярности(desc)", sortProperty: "rating" },/* убывание */
-    { name: "популярности(asc)", sortProperty: "-rating" },/* возрастание */
-    { name: "цене(desc)", sortProperty: "price" },
-    { name: "цене(asc)", sortProperty: "-price" },
-    { name: "алфавиту(desc)", sortProperty: "title" },
-    { name: "алфавиту(asc)", sortProperty: "-title" },
+    { name: "популярность по убыванию", sortProperty: "rating" }, 
+    {name: "популярность по возрастанию", sortProperty: "-rating" }, 
+    { name: "цена по убыванию", sortProperty: "price" },
+    { name: "цена по возрастанию", sortProperty: "-price" },
+    { name: "алфавит по убыванию", sortProperty: "title" },
+    { name: "алфавит по возрастанию", sortProperty: "-title" },
   ];
 
   const onClickListItem = (index) => {
     onChangeSort(index);
-    setOpen(false); /* выбираем пункт в меню и оно скрывается */
+    setOpen(false);
   };
 
   return (
@@ -40,10 +39,11 @@ function Sort({ value, onChangeSort }) {
             {list.map((object, index) => (
               <li
                 key={index}
-                onClick={()=>onClickListItem(object)
-                } /* через onClickListItem передаем объект(name+sortProperty), который попадает в value */
-                className={value.sortProperty === object.sortProperty ? "active" : ""}
-              > {/*то что хранится у родителя(value.sortProperty) сравниваем с тем, что мы сейчас рендерим(object.sortProperty)*/}
+                onClick={() => onClickListItem(object)}
+                className={
+                  value.sortProperty === object.sortProperty ? "active" : ""
+                }
+              >
                 {object.name}
               </li>
             ))}
